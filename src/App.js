@@ -14,9 +14,9 @@ const SECTIONS = [
 
 const SKILLS = [
   { name: 'Back-end', icon: Server, items: ['Java', 'Spring Boot', 'JPA / Hibernate', 'PHP', 'Laravel', 'Python', 'C/C++', 'API REST', 'Node.js'] },
-  { name: 'Front-end', icon: Code, items: ['React', 'JavaScript', 'HTML / CSS', 'Vue.js', 'Bootstrap', 'JavaFX'] },
+  { name: 'Front-end', icon: Code, items: ['React', 'JavaScript', 'HTML / CSS', 'Bootstrap', 'JavaFX'] },
   { name: 'Bases de données', icon: Database, items: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQL'] },
-  { name: 'Outils & qualité', icon: Wrench, items: ['Git / GitHub', 'GitLab CI/CD', 'Docker','JUnit', 'Jira'] },
+  { name: 'Outils & qualité', icon: Wrench, items: ['Git / GitHub', 'GitHub Actions', 'GitLab CI/CD', 'Docker','JUnit', 'Jira'] },
 ];
 
 const EXPERIENCES = [
@@ -61,6 +61,12 @@ const PROJECTS = [
     tech: 'Java 21 · Spring Boot · React · MySQL',
     description: 'Application web de suivi des candidatures de stage, avec API REST, persistance JPA/Hibernate et tests JUnit.',
     github: `${GH}/StageFlow`,
+  },
+  {
+    title: 'StageFlow Deploy',
+    tech: 'Docker · Docker Compose · GitHub Actions · nginx · MySQL',
+    description: "Pipeline CI/CD pour StageFlow : construction des images Docker, démarrage de l'application complète, test de bout en bout, puis publication des images sur GitHub Container Registry.",
+    github: `${GH}/stageflow-deploy`,
   },
   {
     title: 'ChariPHP',
