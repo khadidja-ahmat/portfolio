@@ -13,10 +13,10 @@ const SECTIONS = [
 ];
 
 const SKILLS = [
-  { name: 'Back-end', icon: Server, items: ['Java', 'Spring Boot', 'JPA / Hibernate', 'PHP', 'Laravel', 'Python', 'C/C++', 'API REST', 'Node.js'] },
-  { name: 'Front-end', icon: Code, items: ['React', 'JavaScript', 'HTML / CSS', 'Bootstrap', 'JavaFX'] },
-  { name: 'Bases de données', icon: Database, items: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQL'] },
-  { name: 'Outils & qualité', icon: Wrench, items: ['Git / GitHub', 'GitHub Actions', 'GitLab CI/CD', 'Docker','JUnit', 'Jira'] },
+  { name: 'Back-end', icon: Server, items: ['Java', 'Spring Boot','Spring Security (JWT)', 'JPA / Hibernate', 'Maven', 'PHP', 'Laravel', 'Python', 'C/C++', 'API REST', 'Node.js','Kotlin'] },
+  { name: 'Front-end', icon: Code, items: ['Angular', 'TypeScript','React', 'JavaScript', 'HTML / CSS', 'Bootstrap', 'JavaFX','Android'] },
+  { name: 'Bases de données', icon: Database, items: ['MySQL', 'PostgreSQL', 'MongoDB', 'Firebase','SQL'] },
+  { name: 'Outils & qualité', icon: Wrench, items: ['Git / GitHub', 'GitHub Actions', 'GitLab CI/CD', 'Docker', 'Docker Compose', 'Nginx', 'JUnit','Mockito', 'Jira'] },
 ];
 
 const EXPERIENCES = [
@@ -36,7 +36,7 @@ const EXPERIENCES = [
     place: 'SAADA Technology – Tchad',
     date: '2023',
     points: ['Développement des applications en équipe', "Participation à la gestion et à l'évaluation de projets logiciels"],
-    tech: 'Java, Junit, React,  MySQL',
+    tech: 'Java, Maven, JUnit, React, Node.js, MySQL, Git',
   },
   {
     role: 'Stage de fin d\'études',
@@ -51,11 +51,17 @@ const FORMATION = [
   { title: 'Master 2 Informatique – Génie logiciel', place: 'Université de Bordeaux', date: '2026 – 2027' },
   { title: 'Master 1 Informatique', place: 'Université de Bordeaux', date: '2025 – 2026' },
   { title: 'Licence 3 Informatique générale', place: 'Université de Limoges', date: '2024 – 2025' },
-  { title: 'Licence Informatique – option Génie logiciel', place: 'Ecole Nationale Supérieure des Technologies de l\'Information et de la Communication ', date: '2019 – 2023' },
+  { title: 'Licence Informatique – option Génie logiciel', place: 'Ecole Nationale Supérieure des Technologies de l\'Information et de la Communication ', date: '2023' },
 ];
 
 const GH = 'https://github.com/khadidja-ahmat';
 const PROJECTS = [
+    {
+    title: 'Réservation de salles',
+    tech: 'Java 21 · Spring Boot · Spring Security (JWT) · Angular · PostgreSQL · Docker',
+    description: "Application web de réservation de salles : API REST Java / Spring Boot sécurisée (JWT), interface Angular (guard, intercepteur HTTP), tests JUnit, Mockito et MockMvc, conteneurisation Docker Compose et Nginx, pipeline GitHub Actions.",
+    github: `${GH}/reservation-de-salles`,
+  },
   {
     title: 'StageFlow',
     tech: 'Java 21 · Spring Boot · React · MySQL',
@@ -64,17 +70,11 @@ const PROJECTS = [
   },
   {
     title: 'StageFlow Deploy',
-    tech: 'Docker · Docker Compose · GitHub Actions · nginx · MySQL',
-    description: "Pipeline CI/CD pour StageFlow : construction des images Docker, démarrage de l'application complète, test de bout en bout, puis publication des images sur GitHub Container Registry.",
+    tech: 'Docker · Docker Compose · GitHub Actions · Nginx · Prometheus · Grafana · MySQL',
+     description: "Docker et CI/CD autour de StageFlow : Docker Compose, pipeline GitHub Actions (tests, test de bout en bout, publication des images), supervision Prometheus / Grafana et sauvegardes MySQL testées.",
     github: `${GH}/stageflow-deploy`,
   },
-  {
-    title: 'ChariPHP',
-    tech: 'PHP · MySQL · AJAX · Bootstrap',
-    description: "Générateur d'applications web PHP/MySQL : site public, back-office sécurisé et modules CRUD générés automatiquement depuis les tables.",
-    github: `${GH}/ChariPHP`,
-  },
-    {
+ {
     title: 'Quoridor',
     tech: 'Java 21 · JavaFX · Maven · JUnit · Minimax/MCTS',
     description: "Projet universitaire en équipe : jeu de Quoridor avec interface graphique, mode console, réseau et IA. J'ai réalisé les modules graph, network, CLI, GUI et persistance, ainsi que les tests associés.",
@@ -84,27 +84,28 @@ const PROJECTS = [
   {
     title: 'Programmation Web',
     tech: 'HTML · CSS · JavaScript · Node.js · Express · MongoDB',
-    description: 'programmation web du Master : jeu de cartes, blackjack, météo avec carte interactive, puis API REST avec Express et MongoDB (CRUD, authentification JWT, documentation Swagger).',
+    description: 'Programmation web du Master : jeu de cartes, blackjack, météo avec carte interactive, puis API REST avec Express et MongoDB (CRUD, authentification JWT, documentation Swagger).',
     github: `${GH}/programmation-web`,
     demo: 'https://khadidja-ahmat.github.io/programmation-web/',
   },
-  {
-    title: 'microeditor-java',
-    tech: 'Java · JavaFX',
-    description: 'Éditeur de texte minimaliste développé en Java avec une interface JavaFX.',
-    github: `${GH}/microeditor-java`,
+   {
+    title: 'CoupDeMain',
+    tech: 'Kotlin · Android · Firebase (Authentication, Realtime Database)',
+    description: "Application Android d'entraide : comptes utilisateurs, services partagés en ligne, photo avec l'appareil, lien vers la carte, recherche, fragments et tests unitaires.",
+    github: `${GH}/coupdemain`,
   },
+ {
+    title: 'ChariPHP',
+    tech: 'PHP · MySQL · AJAX · Bootstrap',
+    description: "Générateur d'applications web PHP/MySQL : site public, back-office sécurisé et modules CRUD générés automatiquement depuis les tables.",
+    github: `${GH}/ChariPHP`,
+  },
+
   {
     title: 'Clinique Espoir – Laravel',
     tech: 'Laravel · MySQL · API · Tests',
     description: 'Gestion de clinique (patients, rendez-vous, ordonnances) avec authentification, API et tests.',
     github: `${GH}/site-web-clinique_espoir`,
-  },
-  {
-    title: 'Clinique Espoir – PHP natif',
-    tech: 'PHP · ChariPHP · MySQL',
-    description: 'La même clinique avec un back-office généré par ChariPHP : deux approches comparées.',
-    github: `${GH}/Site-web-clinique-Espoir-ChariPHP`,
   },
   {
     title: 'Site de la CNAS',
@@ -237,10 +238,10 @@ export default function App() {
             <h1 style={{ animationDelay: '150ms' }} className="fade-up text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
               Khadidja <span className="bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent">Ahmat Hassan</span>
             </h1>
-            <p style={{ animationDelay: '300ms' }} className="fade-up mt-4 min-h-[2rem] text-xl font-medium text-slate-700 md:text-2xl"><Typing words={['Développeuse Full-Stack', 'Java & Spring Boot', 'React & Node.js', 'PHP & Laravel']} /></p>
+            <p style={{ animationDelay: '300ms' }} className="fade-up mt-4 min-h-[2rem] text-xl font-medium text-slate-700 md:text-2xl"><Typing words={['Développeuse Java / Angular', 'Java & Spring Boot', 'Docker & CI/CD', 'React & Node.js']} /></p>
             <p style={{ animationDelay: '450ms' }} className="fade-up mt-5 max-w-xl text-lg leading-relaxed text-slate-600 mx-auto md:mx-0">
-              Étudiante en Master 2 Informatique, parcours Génie logiciel, à l'Université de Bordeaux. Je conçois des applications avec
-              Java, Spring Boot, React, Node.js et PHP/Laravel.
+              Étudiante en Master 2 Informatique, parcours Génie logiciel, à l'Université de Bordeaux. Je conçois des applications full-stack avec
+              Java, Spring Boot, Angular et React, conteneurisées avec Docker et testées en CI.
             </p>
             <div style={{ animationDelay: '600ms' }} className="fade-up mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
               <button onClick={() => go('projects')} className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-7 py-3 font-semibold text-white shadow-lg shadow-violet-600/25 transition hover:bg-violet-700">
