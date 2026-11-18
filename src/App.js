@@ -71,7 +71,7 @@ const PROJECTS = [
   {
     title: 'StageFlow Deploy',
     tech: 'Docker · Docker Compose · GitHub Actions · Nginx · Prometheus · Grafana · MySQL',
-     description: "Docker et CI/CD autour de StageFlow : Docker Compose, pipeline GitHub Actions (tests, test de bout en bout, publication des images), supervision Prometheus / Grafana et sauvegardes MySQL testées.",
+    description: "Docker et CI/CD autour de StageFlow : Docker Compose, pipeline GitHub Actions (tests, test de bout en bout, publication des images), supervision Prometheus / Grafana et sauvegardes MySQL testées.",
     github: `${GH}/stageflow-deploy`,
   },
  {
@@ -79,7 +79,7 @@ const PROJECTS = [
     tech: 'Java 21 · JavaFX · Maven · JUnit · Minimax/MCTS',
     description: "Projet universitaire en équipe : jeu de Quoridor avec interface graphique, mode console, réseau et IA. J'ai réalisé les modules graph, network, CLI, GUI et persistance, ainsi que les tests associés.",
     team: true,
-    soon: true,
+    github: `${GH}/quoridor`,
   },
   {
     title: 'Programmation Web',
